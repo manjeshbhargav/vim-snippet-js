@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300");
+
+.vim-snippet-js {
+  background-color: #222;
+  font-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  overflow: auto;
+  padding: 0 15px 15px 15px;
+  width: 600px;
+}
+
+.vim-snippet-js span {
+  line-height: 1.8em;
+}
+
+.vim-snippet-js .Keyword,
+.vim-snippet-js .Null {
+  color: #55ff55;
+}
+
+.vim-snippet-js .Punctuator {
+  color: #ff5555;
+}
+
+.vim-snippet-js .String {
+  color: #ff55ff;
+}
+
+.vim-snippet-js .Identifier {
+  color: white;
+}
+
+.vim-snippet-js .Numeric {
+  color: #cd5c5c;
+}
+
+.vim-snippet-js .BlockComment,
+.vim-snippet-js .LineComment {
+  color: #87ceeb;
+}
+
+.vim-snippet-js .Boolean {
+  color: #55ff55;
+}

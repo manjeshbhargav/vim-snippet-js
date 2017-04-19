@@ -1,0 +1,31 @@
+{
+  "name": "vim-snippet-js",
+  "version": "1.0.0",
+  "description": "Create an embeddable JavaScript code snippet with Vim styling",
+  "scripts": {
+    "build": "mkdir -p dist && ./node_modules/.bin/browserify -t browserify-css src/index.js > dist/vim-snippet-js.js",
+    "serve": "python -m SimpleHTTPServer 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manjeshbhargav/vim-snippet-js.git"
+  },
+  "keywords": [
+    "vim",
+    "javascript",
+    "snippet"
+  ],
+  "author": "Manjesh Malavalli <manjesh.github@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manjeshbhargav/vim-snippet-js/issues"
+  },
+  "homepage": "https://github.com/manjeshbhargav/vim-snippet-js#readme",
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "browserify-css": "^0.10.0"
+  },
+  "dependencies": {
+    "esprima": "^3.1.3"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VimSnippet JS</title>
+  <script type="text/javascript" src="dist/vim-snippet-js.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    function getSnippet(path) {
+      return new Promise(function(resolve) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', path, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.status === 200 && xhr.readyState === 4) {
+            resolve(xhr.responseText);
+          }
+        };
+        xhr.send(null);
+      });
+    }
+
+    getSnippet('/test-snippet.js').then(function(code) {
+      document.body.appendChild(vimSnippetJS(code));
+    }, function(error) {
+      document.body.innerText = JSON.stringify(error);
+    });
+  </script>
+</body>
+</html>
